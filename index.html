@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style de Vie - Moda para Hombre y Mujer</title>
+    <style>
+        :root {
+            --hombre-primary: #B5EAD7; /* verde pastel suave */
+            --hombre-secondary: #bcc8f9; /* azul pastel */
+            --mujer-primary: #f5b3c2; /* rosa pastel */
+            --mujer-secondary: hsl(281, 45%, 80%); /* lila pastel */
+            --accent: #FF9AA2; /* rosa coral pastel */
+            --text-dark: #a40aa4;
+            --text-light: #160b0b;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--text-dark);
+        }
+        
+        /* Header modificado */
+        header {
+            width: 100%;
+            background: linear-gradient(135deg, var(--hombre-primary), var(--mujer-primary));
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .logo-container {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 15px 0;
+        }
+        
+        .header-logo {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: contain;
+        }
+        
+        .header-slogan {
+            text-align: center;
+            margin: 0;
+            padding: 10px 0 20px;
+            font-size: 1.1em;
+            color: var(--text-dark);
+            background: rgba(255, 255, 255, 0.7);
+            width: 100%;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: center;
+            background: white;
+            padding: 12px;
+            box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+            flex-wrap: wrap;
+        }
+        
+        nav a {
+            margin: 5px 12px;
+            text-decoration: none;
+            color: var(--text-light);
+            font-weight: 600;
+            font-size: 1em;
+            transition: color 0.3s;
+        }
+        
+        nav a:hover {
+            color: var(--accent);
+        }
+        
+        .hombre-section, .mujer-section {
+            padding: 30px 15px;
+        }
+        
+        .hombre-section {
+            background-color: var(--hombre-primary);
+        }
+        
+        .mujer-section {
+            background-color: var(--mujer-primary);
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 15px;
+            padding: 10px;
+        }
+        
+        .product-card {
+            background: rgb(241, 253, 253);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+        }
+        
+        .product-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+        
+        .product-info {
+            padding: 12px;
+            text-align: center;
+        }
+        
+        .product-info h3 {
+            margin: 0 0 8px 0;
+            font-size: 0.95em;
+        }
+        
+        .product-info p {
+            margin: 0 0 10px 0;
+            font-size: 1em;
+            font-weight: 600;
+            color: var(--accent);
+        }
+        
+        .promo-banner {
+            background: var(--accent);
+            color: white;
+            text-align: center;
+            padding: 14px;
+            font-weight: bold;
+            font-size: 0.95em;
+        }
+        
+        footer {
+            background: linear-gradient(135deg, #3a3a3a, #1a1a1a);
+            color: white;
+            text-align: center;
+            padding: 30px 15px;
+        }
+        
+        .social-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            margin: 25px 0;
+        }
+        
+        .social-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            font-size: 0.9em;
+            width: 80%;
+            max-width: 250px;
+        }
+        
+        .instagram-button {
+            background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45, #FFDC80);
+            color: white;
+        }
+        
+        .whatsapp-footer-button {
+            background: #25D366;
+            color: white;
+        }
+        
+        .whatsapp-button {
+            background: #25D366;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 25px;
+            text-decoration: none;
+            display: inline-block;
+            margin: 8px 0;
+            font-weight: 600;
+            transition: all 0.3s;
+            font-size: 0.9em;
+        }
+        
+        h1, h2 {
+            text-align: center;
+            margin-bottom: 12px;
+            font-size: 1.5em;
+        }
+        
+        h4 {
+            text-align: center;
+            font-weight: 400;
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-style: italic;
+            font-size: 0.9em;
+        }
+        
+        #contacto {
+            padding: 30px 15px;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+        
+        /* Estilos para pantallas más grandes (tablets y desktop) */
+        @media (min-width: 768px) {
+            .logo-container {
+                padding: 20px 0;
+            }
+            
+            .header-slogan {
+                font-size: 1.2em;
+                padding: 15px 0 25px;
+            }
+            
+            nav a {
+                margin: 0 20px;
+                font-size: 1.1em;
+            }
+            
+            .product-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                gap: 25px;
+                padding: 20px;
+            }
+            
+            .product-image {
+                height: 250px;
+            }
+            
+            .social-container {
+                flex-direction: row;
+                justify-content: center;
+                gap: 25px;
+            }
+            
+            .social-button {
+                width: auto;
+                padding: 12px 25px;
+            }
+            
+            h1, h2 {
+                font-size: 2em;
+            }
+            
+            h4 {
+                font-size: 1.1em;
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="imagenes/logo.png" alt="Style de Vie" class="header-logo">
+        </div>
+        <p class="header-slogan">Compra con estilo 🤙🏻</p>
+    </header>
+    
+    <nav>
+        <a href="#hombre">Ropa Hombre</a>
+        <a href="#mujer">Ropa Mujer</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+    
+    <div class="promo-banner">
+        🎉 ¡Por cualquier compra lleva una pulsera de regalo a tu elección! 🎉
+    </div>
+    
+    <section id="hombre" class="hombre-section">
+        <h1>Ropa para Hombre</h1>
+        <h4>Con nosotros sabrás lo que es ser facha 😉</h4>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="imagenes/chaquazuloscu.jpg" alt="Sudadera para hombre" class="product-image" onerror="this.src='https://via.placeholder.com/300x300?text=Imagen+no+disponible'">
+                <div class="product-info">
+                    <h3>Chaqueta T(M)</h3>
+                    <p>$73.000</p>
+                    <a href="https://wa.me/573114857008?text=Hola%20Style%20de%20Vie,%20estoy%20interesado%20en%20la%20Chaqueta de Beisbol t(m)%20de%20$73000" class="whatsapp-button">
+                        <i class="fab fa-whatsapp"></i> Comprar
+                    </a>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="imagenes/chaqgris.jpg" alt="Sudadera para hombre" class="product-image" onerror="this.src='https://via.placeholder.com/300x300?text=Imagen+no+disponible'">
+                <div class="product-info">
+                    <h3>Chaqueta T(M)</h3>
+                    <p>$90.000</p>
+                    <a href="https://wa.me/573114857008?text=Hola%20Style%20de%20Vie,%20estoy%20interesado%20en%20la%20Chaqueta gris con capucha t(m)%20de%20$90000" class="whatsapp-button">
+                        <i class="fab fa-whatsapp"></i> Comprar
+                    </a>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="imagenes/camisasfutbol.jpg" alt="Sudadera para hombre" class="product-image" onerror="this.src='https://via.placeholder.com/300x300?text=Imagen+no+disponible'">
+                <div class="product-info">
+                    <h3>Camiseta #23 T(S)</h3>
+                    <p>$29.000</p>
+                    <a href="https://wa.me/573114857008?text=Hola%20Style%20de%20Vie,%20estoy%20interesado%20en%20la%20Camiseta%20(diga la que le gusta)" class="whatsapp-button">
+                        <i class="fab fa-whatsapp"></i> Comprar
+                    </a>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="imagenes/chaqazulNY.jpg" alt="Sudadera para hombre" class="product-image" onerror="this.src='https://via.placeholder.com/300x300?text=Imagen+no+disponible'">
+                <div class="product-info">
+                    <h3>Chaqueta estampado "Los Ángeles" T(M)</h3>
+                    <p>$55.000</p>
+                    <a href="https://wa.me/573114857008?text=Hola%20Style%20de%20Vie,%20estoy%20interesado%20en%20la%chaqueta los Ángeles t(m)$55000" class="whatsapp-button">
+                        <i class="fab fa-whatsapp"></i> Comprar
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="mujer" class="mujer-section">
+        <h1>Ropa para Mujer</h1>
+        <h4>Eres linda pero sé el doble con nuestras prendas 🥰</h4>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="imagenes/blusassinmanga.jpg" alt="Vestido para mujer" class="product-image" onerror="this.src='https://via.placeholder.com/300x300?text=Imagen+no+disponible'">
+                <div class="product-info">
+                    <h3>Camiseta sin manga T(M)</h3>
+                    <p>$17.800</p>
+                    <a href="https://wa.me/573114857008?text=Hola%20Style%20de%20Vie,%20estoy%20interesada%20en%20la%20Camiseta sin %20manga T(M)%20de%20$17800" class="whatsapp-button">
+                        <i class="fab fa-whatsapp"></i> Comprar
+                    </a>
+                </div>
+            </div>
+        
+            <div class="product-card">
+                <img src="imagenes/blusanegrabody.jpg" alt="Vestido para mujer" class="product-image" onerror="this.src='https://via.placeholder.com/300x300?text=Imagen+no+disponible'">
+                <div class="product-info">
+                    <h3>Top de Malla T(M)</h3>
+                    <p>$26.000</p>
+                    <a href="https://wa.me/573114857008?text=Hola%20Style%20de%20Vie,%20estoy%20interesada%20en%20el%20Top de Malla T(M)%20de%20$26000" class="whatsapp-button">
+                        <i class="fab fa-whatsapp"></i> Comprar
+                    </a>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="imagenes/blusafresitas.jpg" alt="Vestido para mujer" class="product-image" onerror="this.src='https://via.placeholder.com/300x300?text=Imagen+no+disponible'">
+                <div class="product-info">
+                    <h3>Blusa estampado fresas T(M)</h3>
+                    <p>$27.000</p>
+                    <a href="https://wa.me/573114857008?text=Hola%20Style%20de%20Vie,%20estoy%20interesada%20en%20la%20Blusa estampado fresas T(M)%20de%20$27000" class="whatsapp-button">
+                        <i class="fab fa-whatsapp"></i> Comprar
+                    </a>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="imagenes/blusagris.jpg" alt="Vestido para mujer" class="product-image" onerror="this.src='https://via.placeholder.com/300x300?text=Imagen+no+disponible'">
+                <div class="product-info">
+                    <h3>Blusa Gris T(M) </h3>
+                    <p>$34.000</p>
+                    <a href="https://wa.me/573114857008?text=Hola%20Style%20de%20Vie,%20estoy%20interesada%20en%20la%20Blusa Gris T(M)%20de%20$34000" class="whatsapp-button">
+                        <i class="fab fa-whatsapp"></i> Comprar
+                    </a>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="imagenes/blusasconmanga.jpg" alt="Vestido para mujer" class="product-image" onerror="this.src='https://via.placeholder.com/300x300?text=Imagen+no+disponible'">
+                <div class="product-info">
+                    <h3>Blusa corta con manga T(M)</h3>
+                    <p>$20.000</p>
+                    <a href="https://wa.me/573114857008?text=Hola%20Style%20de%20Vie,%20estoy%20interesada%20en%20la%20Blusa corta con manga T(M)%20de%20$20000" class="whatsapp-button">
+                        <i class="fab fa-whatsapp"></i> Comprar
+                    </a>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="imagenes/blusalazo.jpg" alt="Vestido para mujer" class="product-image" onerror="this.src='https://via.placeholder.com/300x300?text=Imagen+no+disponible'">
+                <div class="product-info">
+                    <h3>Blusa Cute blanca T(M)</h3>
+                    <p>$24.000</p>
+                    <a href="https://wa.me/573114857008?text=Hola%20Style%20de%20Vie,%20estoy%20interesada%20en%20la%20Blusa Cute blanca T(M)%20de%20$24000" class="whatsapp-button">
+                        <i class="fab fa-whatsapp"></i> Comprar
+                    </a>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="imagenes/chaquetablanca.jpg" alt="Vestido para mujer" class="product-image" onerror="this.src='https://via.placeholder.com/300x300?text=Imagen+no+disponible'">
+                <div class="product-info">
+                    <h3>Chaquetas de lana Blanca T(M)</h3>
+                    <p>$33.000</p>
+                    <a href="https://wa.me/573114857008?text=Hola%20Style%20de%20Vie,%20estoy%20interesada%20en%20la%20Chaquetas de lana Blanca T(M)%20de%20$33000" class="whatsapp-button">
+                        <i class="fab fa-whatsapp"></i> Comprar
+                    </a>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="imagenes/TresBlusas.jpg" alt="Vestido para mujer" class="product-image" onerror="this.src='https://via.placeholder.com/300x300?text=Imagen+no+disponible'">
+                <div class="product-info">
+                    <h3>Camisetas con estampados para niñas</h3>
+                    <p>$13.000</p>
+                    <a href="https://wa.me/573114857008?text=Hola%20Style%20de%20Vie,%20estoy%20interesada%20en%20la%20Camiseta con estampados%20de%20$13000" class="whatsapp-button">
+                        <i class="fab fa-whatsapp"></i> Comprar
+                    </a>
+                </div>
+            </div>
+           
+            <div class="product-card">
+                <img src="imagenes/blusanegra.jpg" alt="Vestido para mujer" class="product-image" onerror="this.src='https://via.placeholder.com/300x300?text=Imagen+no+disponible'">
+                <div class="product-info">
+                    <h3>Camiseta con estampado Cerezas</h3>
+                    <p>$30.000</p>
+                    <a href="https://wa.me/573114857008?text=Hola%20Style%20de%20Vie,%20estoy%20interesada%20en%20la%20Camiseta con estampados%20de%20$30000" class="whatsapp-button">
+                        <i class="fab fa-whatsapp"></i> Comprar
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    
+    <section id="contacto">
+        <h2>Contáctanos</h2>
+        <p>¿Tienes preguntas o quieres hacer un pedido especial?</p>
+        <a href="https://wa.me/573114857008" class="whatsapp-button">
+            <i class="fab fa-whatsapp"></i> Escríbenos por WhatsApp
+        </a>
+    </section>
+    
+    <footer>
+        <div class="social-container">
+            <a href="https://instagram.com/maiteeeeeew" target="_blank" class="social-button instagram-button">
+                <i class="fab fa-instagram"></i> Síguenos en Instagram
+            </a>
+            <a href="https://wa.me/573114857008" class="social-button whatsapp-footer-button">
+                <i class="fab fa-whatsapp"></i> Escríbenos por WhatsApp
+            </a>
+        </div>
+        <p style="margin-bottom: 5px;">¡Síguenos para ver nuestras últimas colecciones y promociones!</p>
+        <p style="font-size: 0.8em; opacity: 0.8;">© 2023 Style de Vie. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // Verificar si las imágenes no se cargan y mostrar placeholder
+        document.addEventListener("DOMContentLoaded", function() {
+            const images = document.querySelectorAll('.product-image');
+            images.forEach(img => {
+                img.onerror = function() {
+                    this.src = 'https://via.placeholder.com/300x300?text=Imagen+no+disponible';
+                };
+                
+                // Verificar si la imagen no se cargó (para casos donde el error ocurrió antes de que se asignara el event listener)
+                if(img.complete && img.naturalWidth === 0) {
+                    img.src = 'https://via.placeholder.com/300x300?text=Imagen+no+disponible';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
